@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Menu1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet/less" type="text/css" href="styles.less" />
+        <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    </head>
+    <body>
+        
+        <!-- create a fake container with a fake size (after all of this will go on a electron application) -->
+        <div class="container">
+
+            <div class="app">
+                
+                <div class="wrapper">                  
+
+                    <div class="right-menu">
+                        <div class="logo">
+                            <img src="assets/logo.png" alt="logo">
+                        </div>
+                        <button class="menu active">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-focus-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r=".5" fill="currentColor" /><path d="M12 12m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M12 3l0 2" /><path d="M3 12l2 0" /><path d="M12 19l0 2" /><path d="M19 12l2 0" /></svg>
+                        </button>
+                        <button class="menu">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eye"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>                        
+                        </button>
+                        <button class="menu">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-palette"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" /><path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>                        
+                        </button>
+                        <button class="menu">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-packages"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 16.5l-5 -3l5 -3l5 3v5.5l-5 3z" /><path d="M2 13.5v5.5l5 3" /><path d="M7 16.545l5 -3.03" /><path d="M17 16.5l-5 -3l5 -3l5 3v5.5l-5 3z" /><path d="M12 19l5 3" /><path d="M17 16.5l5 -3" /><path d="M12 13.5v-5.5l-5 -3l5 -3l5 3v5.5" /><path d="M7 5.03v5.455" /><path d="M12 8l5 -3" /></svg>                        
+                        </button>
+                        <button class="menu">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-settings"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></svg>                        
+                        </button>
+                    </div>
+
+                    <div class="content-wrapper">
+    
+                        <div class="top-bar">
+                            <div class="item">LocalPlayer</div>
+                            <div class="item">LocalPlayer Two</div>
+                            <div class="item">Weapon</div>
+                            <div class="item">Exploits</div>
+                            <div class="item">Misc</div>
+                            <div class="item">Skins</div>
+                        </div>
+
+                        <div class="content" id="tab1">
+                            
+                            <div class="box">
+
+                                <div class="input-wrapper">
+                                    <div class="input-group">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        Low Gravity
+                                    </div>
+
+                                    <div class="input-group vertical">
+                                        Gravity
+                                        <custom-slider min="0" max="100" value="30"></custom-slider>
+                                    </div>
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>                                 
+                                    View model chams
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>                       
+                                    Candy bot
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>                             
+                                    No animations
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>                          
+                                    Spiderman
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>                        
+                                    Furnace splitter
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>                       
+                                    TC stack
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>                     
+                                    Aim on mountables
+                                </div>
+                                
+                                <div class="input-wrapper">
+                                    <div class="input-group">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>                              
+                                        Fakelag
+                                    </div>
+
+                                    <div class="input-group vertical">
+                                        Milliseconds delay
+                                        <custom-slider min="0" max="100" value="0"></custom-slider>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box">
+
+                                <div class="input-wrapper">
+                                    <div class="input-group">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>                                          
+                                        FOV Changer
+                                    </div>
+
+                                    <div class="input-group">
+                                        FOV
+                                        <custom-slider min="0" max="500" value="180"></custom-slider>
+                                    </div>
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>                                      
+                                    Walk To Marker
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>                                      
+                                    NoFall
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>                                      
+                                    Instant JackHammer Refill
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>                                      
+                                    Custom HitSound
+                                </div>
+                                
+                            </div>
+                        </div>
+    
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+    <script> 
+    //web component
+    let stylesheetText = `
+        #slider-container {
+            --value : 0 ;
+            --slider-track-color : #3e3d4152;
+            --slider-thumb-color : #292630;
+            --slider-fill-color  : #bc7efd;
+            --slider-fill2-color : #9977c4;
+
+            width : 100% ;
+            height: 1rem ;
+            display: flex ;
+            align-items: center ;
+            justify-content: center ;
+            padding: 0 ;
+            margin: 0 ;
+
+            animation: color-cycle 2s infinite alternate linear;
+        }
+
+        @keyframes color-cycle {
+            0% {
+                --slider-fill-color: var(--slider-fill-color);
+            }
+            100% {
+                --slider-fill-color: var(--slider-fill2-color);
+            }
+        }
+
+        #slider {
+            -webkit-appearance: none;
+            appearance: none;
+
+            height: 1rem ;
+            width: 100% ;
+            margin : 0 ;
+            padding: 0 ;
+
+            background-color: #00000000 ;
+            outline: none ;
+            z-index: 99 ;
+        }
+
+        #slider-track {
+            position: absolute ;
+            top: calc(50% - 0.25rem);
+            left: 0 ;
+            width: 100% ;
+            height: 0.5rem ;
+            border-radius: 0.25rem ;
+            background-color: var(--slider-track-color) ;
+            overflow: hidden ;
+        }
+
+        #slider-track::before {
+            position: absolute ;
+            content: "" ;
+            left: calc(-100% + 1.5rem) ;
+            top : 0 ;
+            width : calc(100% - 1rem) ;
+            height: 100% ;
+            background-color: var(--slider-fill-color) ;
+            transition: background-color 300ms ease-out ;
+            transform-origin: 100% 0%;
+            transform: translateX(calc( var(--value) * 100% )) scaleX(1.2);
+        }
+
+        #slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width : 1rem ;
+            height: 1rem ;
+            border-radius: 50% ;
+            background-color: var(--slider-thumb-color) ;
+            cursor: pointer ;
+            z-index: 99 ;
+            border: 2px solid var(--slider-fill-color) ;
+            transition: border-color 300ms ease-out ;
+        }
+
+        #value {
+            position: absolute ;
+            bottom: calc(100% + 0.5rem) ;
+            left: calc( var(--value) * calc(100% - 1rem) - 0.8rem) ;
+            min-width: 3ch ;
+            border-radius: 4px ;
+            pointer-events: none ;
+
+            padding: 0.5rem ;
+            display: flex ;
+            align-items: center ;
+            justify-content: center ;
+
+            color: #FFF ;
+            background-color: var(--slider-fill-color);
+            opacity: 0 ;
+
+            transition: left 300ms ease-out , opacity 300ms 300ms ease-out , background-color 300ms ease-out ;
+        }
+
+        #value::before {
+            position: absolute ;
+            content: "" ;
+            top: 100% ;
+            left: 50% ;
+            width: 1rem ;
+            height: 1rem ;
+            border-radius: 2px ;
+            background-color: inherit ;
+            transform: translate(-50%,-80%) rotate(45deg);
+            z-index: -1 ;
+        }
+
+        #slider-container:hover  #value {
+            opacity: 1 ;
+        } 
+        ` ;
+
+        class customSlider extends HTMLElement {
+            constructor(){
+                super();
+                this.value = parseFloat(this.getAttribute("value")) || 0;
+                this.min   = parseFloat(this.getAttribute("min"))   || 0;
+                this.max   = parseFloat(this.getAttribute("max"))   || 100;
+                this.step  = parseFloat(this.getAttribute("step"))  || 1;
+
+                this.style.minWidth = "12rem" ;
+                this.style.minHeight = "1rem" ;
+                this.style.position = "relative" ;
+
+                // Slider Element
+                this.root = this.attachShadow({mode:"open"}) ;
+
+                // Functionality
+                this.dragging = false ;
+
+                this.create();
+                this.update();
+            }
+
+            create(){
+                let slider   = document.createElement("input") ;
+                let sliderContainer = document.createElement("div");
+                let sliderTrack = document.createElement("div");
+                let value = document.createElement("div");
+
+                // let style = document.createElement("link");
+                // style.rel = "stylesheet" ;
+                // style.href = "/src/custom-slider-style.css" ;
+
+                let style = document.createElement("style") ;
+                style.innerHTML = stylesheetText ;
+
+                // set properties
+                slider.type = "range" ;
+                slider.id = "slider" ;
+                slider.min = this.min ;
+                slider.max = this.max ;
+                slider.step = this.step ;
+                slider.value = this.value ;
+
+                // add ids
+                sliderContainer.id = "slider-container" ;
+                sliderTrack.id = "slider-track" ;
+                value.id = "value" ;
+
+                // add event listeners
+                slider.addEventListener("input",this.update.bind(this));
+
+                // Appened Elements
+                sliderContainer.appendChild(slider);
+                sliderContainer.appendChild(value);
+                sliderContainer.appendChild(sliderTrack);
+                this.root.appendChild(style);
+                this.root.appendChild(sliderContainer);
+            }
+
+            update(){
+                let track  = this.root.getElementById("slider-container");
+                let slider = this.root.getElementById("slider");
+                let value = this.root.getElementById("value");
+                let valuePercentage = slider.value / (this.max-this.min) ;
+                value.innerText = slider.value ;
+                track.style.setProperty("--value",valuePercentage);
+            }
+
+
+        }
+
+        customElements.define('custom-slider', customSlider );
+
+
+    </script>
+</html>

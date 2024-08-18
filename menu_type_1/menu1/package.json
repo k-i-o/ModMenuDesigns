@@ -1,0 +1,21 @@
+{
+    "name": "menu1",
+    "version": "0.0.1",
+    "description": "",
+    "author": "kiocode",
+    "main": "app.js",
+    "scripts": {
+      "start": "electron ."
+    },
+    "repository": "",
+    "publish": {
+      "provider": "github",
+      "releaseType": "release",
+      "owner": "kiocode",
+      "repo": "menu1"
+    },
+    "license": "ISC",
+    "devDependencies": {
+      "electron": "^27.0.1"
+    }
+}
